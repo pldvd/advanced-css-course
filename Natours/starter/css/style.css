@@ -58,6 +58,9 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+  position: relative;
+  animation-name: slidefromleft;
+  animation-duration: 1s;
 }
 
 .heading-primary-sub {
@@ -65,5 +68,30 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  position: relative;
+  animation-name: slidefromright;
+  animation-duration: 1s;
+  
+}
 
+@keyframes slidefromleft {
+  from {
+    opacity: 0;
+    left: -100%;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  };
+}
+
+@keyframes slidefromright {
+  from {
+    opacity: 0;
+    left: 100%;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  };
 }
