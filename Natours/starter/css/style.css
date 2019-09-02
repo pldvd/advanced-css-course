@@ -86,14 +86,13 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  transition: all .2s;
+  transition: all 0.2s;
   position: relative; }
 
 .btn:hover {
@@ -118,7 +117,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .2s; }
+  transition: all 0.2s; }
 
 .btn--white::after {
   background-color: #fff; }
@@ -128,5 +127,5 @@ body {
   opacity: 0; }
 
 .btn--animated {
-  animation: moveInBottom .5s ease-out 0.75s;
+  animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
