@@ -214,19 +214,23 @@ body {
   position: relative;
   height: 50rem; }
   .card__side {
-    background-color: orangered;
     height: 50rem;
-    transition: all .8s;
+    transition: all .8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden; }
     .card__side--front {
-      background-color: orangered; }
+      background-color: #fff; }
     .card__side--back {
-      background-color: blueviolet;
       transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back--2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back--3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {

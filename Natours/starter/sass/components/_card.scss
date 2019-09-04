@@ -3,11 +3,10 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 50rem;
-  
-  &__side {    
-    background-color: orangered;
+
+  &__side {
     height: 50rem;
-    transition: all .8s;
+    transition: all .8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -15,12 +14,23 @@
     backface-visibility: hidden;
 
     &--front {
-      background-color: orangered;
+      background-color: $color-white;
     }
 
     &--back {
-      background-color: blueviolet;
       transform: rotateY(180deg);
+      
+      &--1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+
+      &--2 {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+      }
+
+      &--3 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+      }
     }
   }
 
