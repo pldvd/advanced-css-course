@@ -212,9 +212,9 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 52rem; }
   .card__side {
-    height: 50rem;
+    height: 52rem;
     transition: all .8s ease;
     position: absolute;
     top: 0;
@@ -269,6 +269,17 @@ body {
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
     .card__header-span--3 {
       background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__text {
+    padding: 3rem; }
+    .card__text ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__text ul li {
+        text-align: center;
+        padding: 1rem 0; }
+        .card__text ul li:not(:last-child) {
+          border-bottom: 2px solid #eee; }
 
 .row {
   max-width: 114rem;
