@@ -49,7 +49,10 @@
     height: 23rem;
     background-size: cover;
     background-blend-mode: screen;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); //this removed the rounded corners for some reason so we need to add them again
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
 
     &--1 {
       background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
