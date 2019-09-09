@@ -43,4 +43,37 @@
     opacity: 0;
     transform: translateY(-4rem);
   }
+
+  &__radio-group { 
+  }
+
+  &__radio-input {
+  }
+
+  &__radio-label {
+
+  }
+
+  &__radio-button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: .5rem solid $color-primary;
+    display: inline-block;
+    transform: translateY(1rem);
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      background-color: $color-primary;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }

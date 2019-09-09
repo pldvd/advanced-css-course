@@ -408,6 +408,26 @@ body {
   opacity: 0;
   transform: translateY(-4rem); }
 
+.form__radio-button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #55c57a;
+  display: inline-block;
+  transform: translateY(1rem);
+  position: relative; }
+  .form__radio-button::after {
+    content: "";
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    background-color: #55c57a;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
