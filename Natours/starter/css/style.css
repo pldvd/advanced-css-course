@@ -396,7 +396,17 @@ body {
     color: #999; }
 
 .form__label {
-  font-size: 1.3rem; }
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s; }
+
+.form__input:placeholder-shown + .form__label {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-4rem); }
 
 .row {
   max-width: 114rem;
