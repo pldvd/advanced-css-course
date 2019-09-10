@@ -26,28 +26,52 @@
     right: 6.5rem;
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1;
+
+    transform: scale(80);
   }
 
   //this is a container for the ul
   &__nav {
     height: 100vh;
+    width: 100%;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 2;
-    position: relative;
   }
 
   //this is the ul itself
   &__list {
     @include center-horizontal-vertical;
+    text-align: center;
+    list-style: none;
   }
 
   //these are the li elements
   &__item {
+    margin: 1rem;
   }
 
   //these are the a-tags within the li-s
   &__link {
+    &:link,
+    &:visited {
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+  
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      background-size: 220%; //first we double the size of the background
+      transition: all .4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: right; //secondly we shift the background image to the right
+      color: $color-primary;
+    }
   }
 }
