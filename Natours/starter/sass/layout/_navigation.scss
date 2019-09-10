@@ -56,6 +56,7 @@
   &__link {
     &:link,
     &:visited {
+      display: inline-block;
       font-size: 3rem;
       font-weight: 300;
       padding: 1rem 2rem;
@@ -64,7 +65,7 @@
       text-transform: uppercase;
   
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
-      background-size: 220%; //first we double the size of the background
+      background-size: 230%; //first we double the size of the background
       transition: all .4s;
     }
 
@@ -72,6 +73,7 @@
     &:active {
       background-position: right; //secondly we shift the background image to the right
       color: $color-primary;
+      transform: translateX(1rem);
     }
   }
 }
