@@ -4,6 +4,15 @@
     display: none;
   }
 
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    width: 100%;
+    opacity: 1;
+  }
+  
   //this is the label belonging to the checkbox, this will be turned into a button
   &__button {
     background-color: $color-white;
@@ -14,6 +23,7 @@
     top: 6rem;
     right: 6rem;
     z-index: 3;
+    box-shadow: 0 1rem 3rem rgba($color-black, .3);
   }
 
   //this is an independent div for background
@@ -26,8 +36,7 @@
     right: 6.5rem;
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1;
-
-    transform: scale(80);
+    transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
   }
 
   //this is a container for the ul
@@ -36,8 +45,11 @@
     width: 100%;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 2;
+    transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+    width: 0;
   }
 
   //this is the ul itself
@@ -45,6 +57,7 @@
     @include center-horizontal-vertical;
     text-align: center;
     list-style: none;
+    width: 100%;
   }
 
   //these are the li elements
@@ -74,6 +87,10 @@
       background-position: right; //secondly we shift the background image to the right
       color: $color-primary;
       transform: translateX(1rem);
+    }
+
+    span {
+      margin-right: 1.5rem;
     }
   }
 }
