@@ -3,15 +3,6 @@
   &__checkbox {
     display: none;
   }
-
-  &__checkbox:checked ~ &__background {
-    transform: scale(80);
-  }
-
-  &__checkbox:checked ~ &__nav {
-    width: 100%;
-    opacity: 1;
-  }
   
   //this is the label belonging to the checkbox, this will be turned into a button
   &__button {
@@ -24,6 +15,8 @@
     right: 6rem;
     z-index: 3;
     box-shadow: 0 1rem 3rem rgba($color-black, .3);
+    text-align: center;
+    cursor: pointer;
   }
 
   //this is an independent div for background
@@ -92,5 +85,56 @@
     span {
       margin-right: 1.5rem;
     }
+  }
+  
+  //navigation opening functionality
+  
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    width: 100%;
+    opacity: 1;
+  }
+
+  //navigation icon
+
+  &__icon {
+    position: relative;
+    margin-top: 50%;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-3;
+      display: inline-block;
+      transition: all .3s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+
+    &::after {
+      top: .8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
   }
 }
