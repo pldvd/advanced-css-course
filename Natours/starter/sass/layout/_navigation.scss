@@ -1,37 +1,53 @@
 .navigation {
-
   //this is the checkbox to be hidden
   &__checkbox {
-
+    display: none;
   }
 
-  //this is the label belonging to the checkbox, this will be turned into a button 
+  //this is the label belonging to the checkbox, this will be turned into a button
   &__button {
-
+    background-color: $color-white;
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 3;
   }
 
   //this is an independent div for background
   &__background {
-
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    z-index: 1;
   }
 
   //this is a container for the ul
   &__nav {
-
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    position: relative;
   }
 
   //this is the ul itself
   &__list {
-
+    @include center-horizontal-vertical;
   }
 
   //these are the li elements
   &__item {
-
   }
 
   //these are the a-tags within the li-s
   &__link {
-
   }
 }
