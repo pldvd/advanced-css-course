@@ -137,4 +137,20 @@
   &__button:hover &__icon::after {
     top: 1rem;
   }
+
+  //navigation icon animation
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+
+    &::before {
+      transform: rotate(225deg);
+      top: 0;
+    }
+    &::after {
+      transform: rotate(-225deg);
+      top: 0;
+    }
+
+  }
 }
