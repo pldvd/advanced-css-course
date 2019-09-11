@@ -61,6 +61,7 @@
   &__link {
     &:link,
     &:visited {
+      width: 0; //this is needed to remove the links from the page (without it they would only be invisible but they would still interfere with ux, and prevent hover for example in the footer)
       display: inline-block;
       font-size: 3rem;
       font-weight: 300;
@@ -68,8 +69,8 @@
       color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
-  
-      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      white-space: nowrap; //so that words don't wrap when width goes back to 0
+      background-image: transparent; //this is needed to remove the white gradient when navigation is collapsed and width goes back to 0
       background-size: 230%; //first we double the size of the background
       transition: all .4s;
     }
@@ -95,6 +96,13 @@
   &__checkbox:checked ~ &__nav {
     width: 100%;
     opacity: 1;
+
+    .navigation__link,
+    .navigation__link:link,
+    .navigation__link:visited {
+      width: auto;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+    }
   }
 
   //navigation icon
