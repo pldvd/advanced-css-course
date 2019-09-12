@@ -472,7 +472,10 @@ body {
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     display: table;
-    overflow: hidden; }
+    overflow: hidden;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all .5s .1s; }
   .popup__left {
     width: 33.33333%;
     display: table-cell;
@@ -494,6 +497,9 @@ body {
     hyphens: auto; }
   .popup:target {
     visibility: visible;
+    opacity: 1; }
+  .popup:target .popup__content {
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1; }
   .popup__close:link, .popup__close:visited {
     font-size: 3rem;
