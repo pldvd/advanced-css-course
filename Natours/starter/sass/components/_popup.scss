@@ -8,6 +8,12 @@
   z-index: 5;
   opacity: 0;
   visibility: hidden;
+  transition: opacity .5s;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
   
   &__content {
     @include center-horizontal-vertical;
@@ -45,5 +51,24 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto; //not supported value in Chrome for windows, supposed to work in FF but doesnt.
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      font-size: 3rem;
+      color: $color-grey-dark-2;
+      text-decoration: none;
+      position: absolute;
+      line-height: 1;
+      top: 2rem;
+      right: 2rem;
+      transition: color .2s;
+      position: inline-block;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
