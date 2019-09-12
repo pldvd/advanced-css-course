@@ -9,11 +9,6 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity .5s;
-
-  &:target {
-    visibility: visible;
-    opacity: 1;
-  }
   
   &__content {
     @include center-horizontal-vertical;
@@ -51,6 +46,11 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto; //not supported value in Chrome for windows, supposed to work in FF but doesnt.
+  }
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
   }
 
   &__close {

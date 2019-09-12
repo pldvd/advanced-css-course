@@ -462,9 +462,6 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity .5s; }
-  .popup:target {
-    visibility: visible;
-    opacity: 1; }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -495,6 +492,9 @@ body {
     column-gap: 4rem;
     column-rule: 1px solid #eee;
     hyphens: auto; }
+  .popup:target {
+    visibility: visible;
+    opacity: 1; }
   .popup__close:link, .popup__close:visited {
     font-size: 3rem;
     color: #999;
