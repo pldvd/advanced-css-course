@@ -23,9 +23,28 @@
 
 // media query manager 
 
-// 0-600px phone
-// 600-900px tablet portrait
-// 900-1200px tablet landscsape
-// 1200-1800px desktop - these are the current styles
-// 1800px and above - big desktop
+/*
+0-600px phone
+600-900px tablet portrait
+900-1200px tablet landscsape
+1200-1800px desktop - these are the current styles
+1800px and above - big desktop
+*/
 
+@mixin respond-phone {
+  @media (max-width: 500px) { @content };
+}
+
+/*
+$breakpoint options:
+- phone
+- tab-landscape
+- tab-portrait
+- desktop-big
+*/
+
+@mixin respond($breakpoint) {
+ @if $breakpoint == phone {
+  @media (max-width: 500px) { @content };
+ }
+}

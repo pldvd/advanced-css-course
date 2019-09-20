@@ -1,3 +1,17 @@
+/*
+0-600px phone
+600-900px tablet portrait
+900-1200px tablet landscsape
+1200-1800px desktop - these are the current styles
+1800px and above - big desktop
+*/
+/*
+$breakpoint options:
+- phone
+- tab-landscape
+- tab-portrait
+- desktop-big
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -340,7 +354,7 @@ body {
   .story__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
-    transition: all .4s; }
+    transition: all 0.4s; }
   .story__text {
     transform: skewX(12deg); }
   .story__caption {
@@ -353,7 +367,7 @@ body {
     text-align: center;
     color: #fff;
     opacity: 0;
-    transition: all .4s;
+    transition: all 0.4s;
     backface-visibility: hidden; }
   .story:hover .story__caption {
     transform: translate(-50%, -50%);
@@ -361,6 +375,9 @@ body {
   .story:hover .story__img {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%); }
+  @media (max-width: 500px) {
+    .story {
+      background-color: green; } }
 
 .bg-video {
   width: 100%;
