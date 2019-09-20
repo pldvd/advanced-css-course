@@ -26,7 +26,7 @@
 /*
 0-600px phone
 600-900px tablet portrait
-900-1200px tablet landscsape
+900-1200px tablet landscape
 1200-1800px desktop - these are the current styles
 1800px and above - big desktop
 */
@@ -38,13 +38,22 @@
 /*
 $breakpoint options:
 - phone
-- tab-landscape
 - tab-portrait
+- tab-landscape
 - desktop-big
 */
 
 @mixin respond($breakpoint) {
  @if $breakpoint == phone {
   @media (max-width: 500px) { @content };
+ }
+ @if $breakpoint == tab-portrait {
+   @media (max-width: 900px) { @content };
+ }
+ @if $breakpoint == tab-landscape {
+   @media (max-width: 1200px) { @content };
+ }
+ @if $breakpoint == desktop-big {
+   @media (min-width: 1800px) { @content };
  }
 }
