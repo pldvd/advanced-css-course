@@ -307,7 +307,8 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem; }
+  height: 52rem;
+  border-radius: 3px; }
   .card__side {
     height: 52rem;
     transition: all 0.8s ease;
@@ -395,40 +396,33 @@ body {
     font-weight: 100; }
   @media (max-width: 56.25em) {
     .card {
-      height: auto; }
+      height: auto;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
       .card__side {
         height: 62rem;
         position: relative;
         top: 0;
         left: 0;
         width: 100%;
-        border-radius: 3px;
-        overflow: hidden;
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+        box-shadow: none; }
         .card__side--front {
           padding-bottom: 10rem; }
-        .card__side:hover .card__side__side--front {
-          transform: rotateY(0); }
         .card__side--back {
           transform: rotateY(0);
           height: 35rem;
           clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-          margin-top: -10rem; }
+          margin-top: -10rem;
+          border-top-right-radius: 0; }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
       .card__cta {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%; }
-      .card__price-box {
-        text-align: center;
-        color: #fff; }
-      .card__price-only {
-        font-size: 1.4rem;
-        text-transform: uppercase; }
       .card__price-value {
-        font-size: 5rem;
-        font-weight: 100; } }
+        font-size: 5rem; } }
 
 .story {
   width: 75%;
