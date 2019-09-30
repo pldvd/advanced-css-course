@@ -22,24 +22,48 @@
     transform: translate(-50%, -50%) scale(0);
     opacity: 0;
     transition: all .5s .1s;
+
+    @include respond(phone) {
+      height: 85vh;
+    }
   }
 
   &__left {
     width: 33.33333%;
     display: table-cell;
     vertical-align: middle;
+
+    
+    @include respond(phone) {
+      width: 100%;
+      height: 20%;
+      position: absolute;
+      overflow: hidden;
+    }
   }
 
   &__right {
     width: 66.66667%;
     display: table-cell;
     vertical-align: middle;
-    padding: 3rem 5rem;
+    padding: 20rem 5rem 10rem;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-top: 20%;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(phone) {
+      display: inline-block;
+      float: left;
+      width: 50%;
+      height: 100%;
+    }
   }
 
   &__text {
@@ -49,6 +73,12 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto; //not supported value in Chrome for windows, supposed to work in FF but doesnt.
+
+    @include respond(phone) {
+      column-count: 1;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &:target {
