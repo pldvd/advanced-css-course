@@ -8,6 +8,10 @@
   @include respond(tab-port) {
     margin-bottom: 5rem;
   }
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem;
+  }
 }
 
 .u-margin-bottom-medium {
