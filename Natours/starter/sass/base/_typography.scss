@@ -49,6 +49,7 @@ body {
 
   @include respond(tab-port) {
     font-size: 3rem;
+    letter-spacing: initial;
   }
 
   @include respond(phone) {
