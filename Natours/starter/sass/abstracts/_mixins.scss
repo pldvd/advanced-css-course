@@ -43,6 +43,8 @@ $breakpoint options:
 - desktop-big
 */
 
+//1em = 16px , breakpoints need to change in case browser default font size is changed by the user, em and rem both take browser default as basis, but rem works oddly in Safari (uses html root font size to calculate breakpoint) so em is the best
+
 @mixin respond($breakpoint) {
  @if $breakpoint == phone {
   @media (max-width: 500px) { @content };
