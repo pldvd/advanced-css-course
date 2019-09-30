@@ -47,7 +47,7 @@ $breakpoint options:
 
 @mixin respond($breakpoint) {
  @if $breakpoint == phone {
-  @media (max-width: 500px) { @content };
+  @media (max-width: 600px) { @content };
  }
  @if $breakpoint == tab-portrait {
    @media (max-width: 900px) { @content };
