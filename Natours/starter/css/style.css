@@ -402,7 +402,7 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
