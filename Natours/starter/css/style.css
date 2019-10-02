@@ -351,10 +351,19 @@ body {
     border-top-right-radius: 3px; }
     .card__image--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../img/nat-5.jpg); }
+      @media only screen and (max-width: 37.5em) {
+        .card__image--1 {
+          background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../img/nat-5-small.jpg); } }
     .card__image--2 {
       background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../img/nat-6.jpg); }
+      @media only screen and (max-width: 37.5em) {
+        .card__image--2 {
+          background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../img/nat-6-small.jpg); } }
     .card__image--3 {
       background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../../img/nat-7.jpg); }
+      @media only screen and (max-width: 37.5em) {
+        .card__image--3 {
+          background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../../img/nat-7-small.jpg); } }
   .card__header {
     width: 75%;
     font-size: 2.8rem;
@@ -939,6 +948,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .section-features {
       padding: 10rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-features {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4-small.jpg); } }
   .section-features > * {
     transform: skewY(7deg); }
 
