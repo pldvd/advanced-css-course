@@ -2,22 +2,31 @@
   max-width: 120rem;
   min-height: 40rem;
   margin: 8rem auto;
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
 }
 
 .header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: .3rem solid var(--color-grey-light-2);
 
 }
 
 .content {
-
+  display: flex;
 }
 
 .sidebar {
-
+  background-color: var(--color-grey-dark-1);
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 18%;
+  //flex: 0 0 18% ---- good practice
 }
 
 .hotel-view {
-
+  background-color: #fff;
+  flex-grow: 1;
+  //flex: 1;
 }
