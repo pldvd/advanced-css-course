@@ -22,7 +22,11 @@ html {
   font-size: 62.5%; }
 
 body {
+  min-height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  color: var(--color-grey-dark-2);
   line-height: 1.6rem;
-  background-image: linear-gradient(to bottom right, #FF3366 0%, #BA265D 100%); }
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-size: cover;
+  background-repeat: no-repeat; }
