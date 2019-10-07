@@ -210,7 +210,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.1rem solid var(--color-grey-light-2);
+  border-bottom: var(--border-bottom);
 
   &__heading {
     font-weight: 200;
@@ -304,3 +304,5 @@
     box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.2);
   }
 }
+
+
