@@ -43,7 +43,6 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--border-bottom);
-  // justify-content: space-evenly;
 }
 
 .description {
@@ -51,6 +50,7 @@
   margin-right: 4.5rem;
   padding: 3rem;
   font-size: 1.4rem;
+  line-height: 1.6em;
   flex: 0 0 60%;
   box-shadow: var(--shadow-light);
 }
