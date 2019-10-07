@@ -238,7 +238,7 @@
     align-items: center;
   }
 
-  
+
   &__icon-location {
     margin-right: .5rem;
   }
@@ -353,4 +353,30 @@
 //////////////////////////
 ////RECOMMEND
 
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center;
+
+  &__count {
+
+  }
+
+  &__friends {
+    margin-left: auto;
+  }
+
+  &__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: .3rem solid white;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
+}
 
