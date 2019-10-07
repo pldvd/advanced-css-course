@@ -189,3 +189,21 @@
   text-align: center;
 }
 
+//////////////////////////
+////GALLERY
+
+.gallery {
+  display: flex;
+
+  &__item {
+    flex-grow: 1;
+  }
+  
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+
