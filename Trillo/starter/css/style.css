@@ -201,52 +201,63 @@ body {
   align-items: center;
   border-bottom: 0.1rem solid var(--color-grey-light-2); }
   .overview__heading {
-    font-weight: 100;
-    font-size: 2.2rem;
+    font-weight: 200;
+    font-size: 2.25rem;
     text-transform: uppercase;
-    padding: 2.5rem 3rem;
+    padding: 1.5rem 3rem;
     letter-spacing: 0.1rem; }
   .overview__stars {
-    margin-right: auto; }
+    margin-right: auto;
+    display: flex; }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary); }
   .overview__location {
-    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center; }
+  .overview__icon-location {
+    margin-right: .5rem; }
   .overview__rating {
-    padding: 1.2rem 2rem;
+    padding: 1.5rem 2.5rem;
+    margin-left: 3rem;
     background-color: var(--color-primary);
     color: #fff;
     font-weight: 100;
+    align-self: stretch;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between; }
   .overview__rating-average {
-    font-size: 2.2rem;
-    padding: 0.5rem; }
+    font-size: 2.25rem;
+    font-weight: 300; }
   .overview__rating-count {
-    font-size: 0.9rem; }
+    font-size: .8rem;
+    margin-top: .5rem;
+    text-transform: uppercase; }
 
 .btn-inline {
-  font-size: 1.2rem;
+  font-size: inherit;
   border: none;
-  padding: 0.2em;
-  background-color: #fff;
+  padding-bottom: 0.2em;
+  background-color: transparent;
   color: var(--color-primary);
   border-bottom: 0.1rem solid currentColor;
   cursor: pointer;
   transition: color 0.2s; }
   .btn-inline:hover {
-    color: #000; }
+    color: var(--color-grey-dark-1); }
   .btn-inline:focus {
     outline: none;
     animation: popup 0.7s infinite;
     animation-direction: alternate; }
 
 @keyframes popup {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
   100% {
     transform: scale(1.1);
     box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.2); } }
