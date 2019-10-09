@@ -82,9 +82,8 @@ body {
   box-shadow: var(--shadow-light); }
 
 .user-reviews {
-  background-color: #fff;
-  flex: 1;
-  box-shadow: var(--shadow-light); }
+  background-color: var(--color-grey-light-1);
+  flex: 1; }
 
 .logo {
   height: 3.25rem;
@@ -324,3 +323,32 @@ body {
     border: .3rem solid white; }
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
+
+.review {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: var(--shadow-light); }
+  .review:not(:last-child) {
+    margin-bottom: 4rem; }
+  .review__text {
+    font-size: 1.3rem;
+    line-height: 2.25rem;
+    margin-bottom: 2rem; }
+  .review__user {
+    display: flex;
+    align-items: center; }
+    .review__user-photo {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      margin-right: 1.5rem; }
+    .review__user-name {
+      font-weight: 700;
+      text-transform: uppercase; }
+    .review__user-rating {
+      margin-left: auto;
+      color: var(--color-primary);
+      font-size: 2rem;
+      font-weight: 100; }
