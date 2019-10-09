@@ -83,7 +83,10 @@ body {
 
 .user-reviews {
   background-color: var(--color-grey-light-1);
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .logo {
   height: 3.25rem;
@@ -267,8 +270,13 @@ body {
   border-bottom: 0.1rem solid currentColor;
   cursor: pointer;
   transition: color 0.2s; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: popup 0.7s infinite;
