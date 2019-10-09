@@ -15,6 +15,11 @@
   align-items: center;
   justify-content: center;
 
+  @include respond(phone-small) {
+    flex: 0 0 100%;
+    order: 3;
+    padding: 2rem 0 0 0;
+  }
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -83,6 +88,10 @@
     &:hover {
       background-color: var(--color-grey-light-2);
     }
+
+    @include respond(phone) {
+      padding: 0 1rem;
+    }
   }
 
   &__icon-box {
@@ -135,6 +144,14 @@
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @include respond(tab-landscape) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include respond(tab-landscape) {
+      flex-grow: 1;
     }
   }
 
@@ -170,6 +187,12 @@
     align-items: center;
     position: relative;
     z-index: 1;
+
+    @include respond(phone) {
+      flex-direction: column;
+      // align-items: center;
+      padding: .7rem 0;
+    }
   }
 
   &__icon {
@@ -177,6 +200,17 @@
     width: 1.75rem;
     fill: currentColor;
     margin-right: 1.75rem;
+    
+    @include respond(phone) {
+      margin-right: 0;
+    }
+  }
+
+  @include respond(tab-landscape) {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -185,6 +219,10 @@
   color: var(--color-grey-light-4);
   padding: 2.5rem;
   text-align: center;
+
+  @include respond(tab-landscape) {
+    display: none;
+  }
 }
 
 //////////////////////////
@@ -212,12 +250,22 @@
   align-items: center;
   border-bottom: var(--border-bottom);
 
+
   &__heading {
     font-weight: 200;
     font-size: 2.25rem;
     text-transform: uppercase;
     padding: 1.5rem 3rem;
     letter-spacing: 0.1rem;
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+      padding: 1rem 1.5rem;
+    }
+
+    @include respond(phone-small) {
+      font-size: 1.3rem;
+    }
   }
 
   &__stars {
@@ -230,12 +278,21 @@
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary);
+
+    @include respond(phone-small) {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
   }
 
   &__location {
     font-size: 1.2rem;
     display: flex;
     align-items: center;
+
+    @include respond(phone-small) {
+      margin-left: 2rem;
+    }
   }
 
   &__icon-location {
@@ -253,18 +310,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+
+    @include respond(phone-small) {
+      margin-left: 2rem;
+      padding: 1rem .7rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
   }
 
   &__rating-count {
     font-size: 0.8rem;
     margin-top: 0.5rem;
     text-transform: uppercase;
+    text-align: center;
   }
 }
 
@@ -325,7 +392,7 @@
 .list {
   list-style: none;
   margin: 3rem 0;
-  padding: 3rem;
+  padding: 3rem 0;
   border-top: var(--border-bottom);
   border-bottom: var(--border-bottom);
 
@@ -371,6 +438,7 @@
 
   &__friends {
     margin-left: auto;
+    flex-shrink: 0;
   }
 
   &__photo {
@@ -398,8 +466,16 @@
   position: relative;
   overflow: hidden;
 
+  @include respond(tab-landscape) {
+    padding: 2rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: 4rem;
+
+    @include respond(phone-small) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__text {
@@ -469,6 +545,8 @@
     text-transform: uppercase;
     font-weight: 100;
     margin-bottom: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
   }
 }
 
@@ -485,12 +563,12 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  
+
   & > * {
     display: inline-block;
-    transition: all .2s;
+    transition: all 0.2s;
     height: 100%;
-    width: 100%;;
+    width: 100%;
   }
 
   &__visible {
@@ -519,7 +597,7 @@
 
   &:focus {
     outline: none;
-    animation: popup .7s infinite;
+    animation: popup 0.7s infinite;
     animation-direction: alternate;
   }
 }
