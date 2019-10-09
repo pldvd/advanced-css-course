@@ -389,6 +389,8 @@
   flex-direction: column;
   background-color: #fff;
   box-shadow: var(--shadow-light);
+  position: relative;
+  overflow: hidden;
 
   &:not(:last-child) {
     margin-bottom: 4rem;
@@ -398,6 +400,8 @@
     font-size: 1.3rem;
     line-height: 2.25rem;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
   }
 
   &__user {
@@ -412,12 +416,15 @@
     }
 
     &-name {
+      font-size: 1.1rem;
       font-weight: 700;
       text-transform: uppercase;
-
+      margin-bottom: .4rem;
     }
 
     &-date {
+      font-size: 1rem;
+      color: var(--color-grey-dark-3);
     }
 
     &-rating {
@@ -426,5 +433,17 @@
       font-size: 2rem;
       font-weight: 100;
     }
+  }
+
+  &::before {
+    content: "\201C";
+    font-family: sans-serif;
+    font-size: 20rem;
+    line-height: 1;
+    color: var(--color-grey-light-2);
+    position: absolute;
+    top: -2.6rem;
+    left: -.8rem;
+    z-index: 0;
   }
 }
