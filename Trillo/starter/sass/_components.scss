@@ -238,9 +238,8 @@
     align-items: center;
   }
 
-
   &__icon-location {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
   &__rating {
@@ -263,8 +262,8 @@
   }
 
   &__rating-count {
-    font-size: .8rem;
-    margin-top: .5rem;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
     text-transform: uppercase;
   }
 }
@@ -284,7 +283,7 @@
 
   & span {
     margin-left: 3px;
-    transition: margin-left .2s;
+    transition: margin-left 0.2s;
   }
 
   &:hover {
@@ -335,14 +334,14 @@
 
   &__item {
     flex: 0 0 50%;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
 
     &::before {
       content: "";
       display: inline-block;
       height: 1rem;
       width: 1rem;
-      margin-right: .7rem;
+      margin-right: 0.7rem;
 
       //Older browsers
       // background-image: url(../img/chevron-thin-right.svg);
@@ -358,7 +357,6 @@
   }
 }
 
-
 //////////////////////////
 ////RECOMMEND
 
@@ -369,7 +367,6 @@
   align-items: center;
 
   &__count {
-
   }
 
   &__friends {
@@ -381,7 +378,7 @@
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
-    border: .3rem solid white;
+    border: 0.3rem solid white;
 
     &:not(:last-child) {
       margin-right: -1.5rem;
@@ -428,7 +425,7 @@
       font-size: 1.1rem;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: .4rem;
+      margin-bottom: 0.4rem;
     }
 
     &-date {
@@ -452,7 +449,77 @@
     color: var(--color-grey-light-2);
     position: absolute;
     top: -2.6rem;
-    left: -.8rem;
+    left: -0.8rem;
     z-index: 0;
+  }
+}
+
+//////////////////////////
+////CTA
+
+.cta {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 100%;
+
+  &__book-now {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 2.5rem;
+  }
+}
+
+//////////////////////////
+////CTA BUTTON
+
+.btn {
+  border: none;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  
+  & > * {
+    display: inline-block;
+    transition: all .2s;
+    height: 100%;
+    width: 100%;;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+    position: relative;
+  }
+
+  &__invisible {
+    position: absolute;
+    padding: 2rem 0;
+    top: -100%;
+    left: 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:focus {
+    outline: none;
+    animation: popup .7s infinite;
+    animation-direction: alternate;
   }
 }
