@@ -219,7 +219,6 @@ body {
     margin: 0 auto;
     left: calc(50% - (1.75 / 2) * 1rem); }
   .user-nav__extension-box {
-    width: 30rem;
     background-color: var(--color-grey-dark-1);
     position: absolute;
     top: 100%;
@@ -248,10 +247,11 @@ body {
       color: var(--color-grey-light-1);
       display: block;
       width: 100%;
-      padding: 1.5rem 0;
+      padding: 1.5rem 9rem;
       display: flex;
       justify-content: center;
-      position: relative; }
+      position: relative;
+      white-space: nowrap; }
       .user-nav__user-menu__item::before {
         content: "";
         display: block;
@@ -270,6 +270,8 @@ body {
         transform-origin: center;
         width: 100%;
         transform: scaleY(1); }
+  .user-nav__messages {
+    padding: 2rem; }
 
 .side-nav {
   font-size: 1.4rem;
@@ -588,3 +590,12 @@ body {
     outline: none;
     animation: popup 0.7s infinite;
     animation-direction: alternate; }
+
+.message {
+  display: flex;
+  width: 40rem; }
+  .message__photo {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-right: 2rem; }
