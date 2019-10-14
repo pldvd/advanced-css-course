@@ -590,9 +590,6 @@ body {
     animation: popup 0.7s infinite;
     animation-direction: alternate; }
 
-.messages {
-  padding-top: 1.5rem; }
-
 .messages-header {
   font-size: 1.2rem;
   padding: 1rem 1.2rem;
@@ -605,15 +602,18 @@ body {
     color: var(--color-grey-light-1); }
   .messages-header__link-divider {
     margin-right: auto; }
+  .messages-header__link:hover {
+    background-color: #4d4d4d; }
 
 .message {
   display: flex;
   width: 40rem;
   color: var(--color-grey-light-1);
   border-bottom: var(--border-bottom-thin);
-  padding: 0 1.5rem 1.5rem 1.5rem; }
-  .message:not(:first-child) {
-    margin-top: 1.5rem; }
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding-top: 1.5rem; }
+  .message:hover {
+    background-color: #4d4d4d; }
   .message__photo {
     width: 5rem;
     height: 5rem;
@@ -622,7 +622,20 @@ body {
   .message__sender-name {
     font-weight: 700;
     font-size: 1.6rem;
-    margin-bottom: 0.7rem; }
+    margin-bottom: 0.7rem;
+    color: var(--color-grey-dark-3); }
   .message__text {
     font-weight: 100;
     font-size: 1.4rem; }
+
+.messages-footer {
+  font-size: 1.2rem;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between; }
+  .messages-footer__link:link, .messages-footer__link:active, .messages-footer__link:visited {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--color-grey-light-1); }
+  .messages-footer__link:hover {
+    background-color: #4d4d4d; }

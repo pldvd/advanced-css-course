@@ -692,10 +692,6 @@
 //////////////////////////
 ////MESSAGES COMPONENT
 
-.messages {
-  padding-top: 1.5rem;
-}
-
 .messages-header {
   font-size: 1.2rem;
   padding: 1rem 1.2rem;
@@ -714,6 +710,10 @@
   &__link-divider {
     margin-right: auto;
   }
+
+  &__link:hover {
+    background-color: lighten(#333, 10%);
+  }
 }
 
 .message {
@@ -721,10 +721,11 @@
   width: 40rem;
   color: var(--color-grey-light-1);
   border-bottom: var(--border-bottom-thin);
-  padding:0 1.5rem 1.5rem 1.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding-top: 1.5rem;
 
-  &:not(:first-child) {
-    margin-top: 1.5rem;
+  &:hover {
+    background-color: lighten(#333, 10%);
   }
 
   &__photo {
@@ -738,10 +739,31 @@
     font-weight: 700;
     font-size: 1.6rem;
     margin-bottom: 0.7rem;
+    color: var(--color-grey-dark-3);
   }
 
   &__text {
     font-weight: 100;
     font-size: 1.4rem;
+  }
+}
+
+.messages-footer {
+  font-size: 1.2rem;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__link:link,
+  &__link:active,
+  &__link:visited {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--color-grey-light-1);
+  }
+
+
+  &__link:hover {
+    background-color: lighten(#333, 10%);
   }
 }
