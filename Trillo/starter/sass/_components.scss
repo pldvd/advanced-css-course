@@ -152,7 +152,7 @@
     z-index: 3;
 
     transform: scaleY(0);
-    transition: transform .1s;
+    transition: transform 0.1s;
     transform-origin: top;
   }
 
@@ -693,13 +693,39 @@
 ////MESSAGES COMPONENT
 
 .messages {
-  padding: 2rem;
+  padding-top: 1.5rem;
+}
+
+.messages-header {
+  font-size: 1.2rem;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--border-bottom-thin);
+
+  &__link:link,
+  &__link:active,
+  &__link:visited {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--color-grey-light-1);
+  }
+
+  &__link-divider {
+    margin-right: auto;
+  }
 }
 
 .message {
   display: flex;
   width: 40rem;
   color: var(--color-grey-light-1);
+  border-bottom: var(--border-bottom-thin);
+  padding:0 1.5rem 1.5rem 1.5rem;
+
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
 
   &__photo {
     width: 5rem;
@@ -711,7 +737,7 @@
   &__sender-name {
     font-weight: 700;
     font-size: 1.6rem;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
   }
 
   &__text {
