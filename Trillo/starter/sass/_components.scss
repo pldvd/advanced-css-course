@@ -213,10 +213,6 @@
       }
     }
   }
-
-  &__messages {
-    padding: 2rem;
-  }
 }
 
 //////////////////////////
@@ -696,15 +692,30 @@
 //////////////////////////
 ////MESSAGES COMPONENT
 
+.messages {
+  padding: 2rem;
+}
 
 .message {
   display: flex;
   width: 40rem;
+  color: var(--color-grey-light-1);
 
   &__photo {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
     margin-right: 2rem;
+  }
+
+  &__sender-name {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: .7rem;
+  }
+
+  &__text {
+    font-weight: 100;
+    font-size: 1.4rem;
   }
 }
