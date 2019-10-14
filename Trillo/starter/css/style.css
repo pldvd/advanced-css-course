@@ -225,9 +225,12 @@ body {
     top: 100%;
     right: 0;
     z-index: 3;
-    display: none; }
+    transform: scaleY(0);
+    transition: transform .1s;
+    transform-origin: top; }
   .user-nav__extendable:hover .user-nav__extension-box {
-    display: block; }
+    display: block;
+    transform: scaleY(1); }
   .user-nav__user-photo {
     height: 3.75rem;
     width: 3.75rem;
@@ -255,11 +258,11 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        width: .5rem;
+        width: 0.5rem;
         transform: scaleY(0);
         height: 100%;
         background-color: var(--color-primary);
-        transition: transform .2s, width .4s .2s;
+        transition: transform 0.2s, width 0.4s 0.2s;
         z-index: -1; }
       .user-nav__user-menu__item:not(:last-child) {
         margin-bottom: 1rem; }

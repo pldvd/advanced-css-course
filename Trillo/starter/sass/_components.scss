@@ -152,11 +152,14 @@
     right: 0;
     z-index: 3;
 
-    display: none;
+    transform: scaleY(0);
+    transition: transform .1s;
+    transform-origin: top;
   }
 
   &__extendable:hover &__extension-box {
     display: block;
+    transform: scaleY(1);
   }
 
   &__user-photo {
