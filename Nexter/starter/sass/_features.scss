@@ -3,6 +3,30 @@
   margin: 15rem 0;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 2.5rem;
+  row-gap: 1.5rem;
+  align-items: center;
+
+  &__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: $color-primary;
+    grid-row: 1 / span 2;
+    align-self: start;
+    transform: translateY(-1rem);
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+  }
 }
