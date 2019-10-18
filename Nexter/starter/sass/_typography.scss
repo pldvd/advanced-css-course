@@ -9,10 +9,23 @@
 
 .heading-2 {
   @extend %heading;
+  font-size: 4rem;
+  font-style: italic;
+
+  &--light {
+    color: $color-grey-light-1;
+  }
+  
+  &--dark {
+    color: $color-grey-dark-1;
+  }
 }
 
 .heading-3 {
   @extend %heading;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: $color-primary;
 }
 
 .heading-4 {
@@ -25,5 +38,20 @@
 
   &--dark {
     color: $color-grey-dark-1;
+  }
+}
+
+.btn {
+  padding: 1.8rem 3rem;
+  font-size: 1.5rem;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: $color-primary;
+  cursor: pointer;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: $color-primary-dark;
   }
 }
