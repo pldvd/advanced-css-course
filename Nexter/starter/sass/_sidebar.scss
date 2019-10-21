@@ -2,4 +2,40 @@
   background-color: $color-primary-dark;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.burger-icon {
+  height: 4rem;
+  width: 4rem;
+  margin-top: 4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    background-color: white;
+    border: none;
+    border-radius: none;
+    height: 0.2rem;
+    width: 100%;
+
+    &::before, 
+    &::after {
+      content: "";
+      background-color: white;
+      height: 0.2rem;
+      width: 100%;
+      display: block;
+    }
+
+    &::before {
+      transform: translateY(-1.5rem);
+    }
+    &::after {
+      transform: translateY(1.5rem);
+    }
+  }
 }
