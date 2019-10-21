@@ -179,7 +179,7 @@ body {
     grid-template-columns: max-content; }
   .home__location, .home__rooms, .home__area, .home__price {
     font-size: 1.3rem;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     display: flex;
     align-items: center; }
     .home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
