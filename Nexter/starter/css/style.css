@@ -249,4 +249,41 @@ body {
 
 .footer {
   background-color: #101d2c;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 10rem; }
+
+.nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-column-gap: 2rem;
+  align-items: center; }
+
+.nav__item {
+  padding: 1.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+  cursor: pointer; }
+  .nav__item a:link,
+  .nav__item a:visited,
+  .nav__item a:active {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-align: center;
+    transition: transform .3s; }
+  .nav__item:hover {
+    background-color: rgba(255, 255, 255, 0.05); }
+  .nav__item:hover a {
+    transform: translateY(-0.3rem); }
+
+.legal {
+  font-size: 1.2rem;
+  color: #aaa;
+  width: 70%;
+  margin: 4rem auto 0;
+  text-align: center; }
