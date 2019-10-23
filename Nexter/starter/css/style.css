@@ -198,7 +198,11 @@ body {
     @media only screen and (max-width: 50em) {
       .realtors__list {
         width: 100%;
-        grid-template-columns: repeat(3, min-content max-content); } }
+        grid-template-columns: repeat(3, min-content max-content);
+        justify-content: center; } }
+    @media only screen and (max-width: 37.5em) {
+      .realtors__list {
+        grid-template-columns: min-content max-content; } }
   .realtors__details h4 {
     margin-bottom: 0.3rem; }
   .realtors__sold {
