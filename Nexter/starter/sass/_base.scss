@@ -56,6 +56,6 @@ body  {
   }
 
   @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 8rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
+    grid-template-rows: 8rem calc(100vh - 6rem) min-content min-content auto auto repeat(3, min-content);
   }
 }

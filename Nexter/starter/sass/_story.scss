@@ -8,6 +8,13 @@
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
     background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary-dark, .5)), url(../img/back.jpg);
+    background-size: cover;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start / full-end;
+      justify-items: center;
+      padding: 5vw;
+    }
   }
 
   &__img--1 {
@@ -15,6 +22,11 @@
     grid-column: 2 / span 4;
     grid-row: 2 / span 4;
     box-shadow: 0 2rem 5rem rgba(#000, .1);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / 5;
+      grid-row: 1 / -1;
+    }
   }
   
   &__img--2 {
@@ -24,6 +36,11 @@
     align-self: end;
     z-index: 1;
     box-shadow: 0 2rem 5rem rgba(#000, .2);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 2 / 6;
+      width: 100%;
+    }
   }
 
   &__content {
@@ -34,6 +51,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start / full-end;
+      grid-row: 5 / 6;
+    }
   }
 
   &__text {
